@@ -16,7 +16,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="dist/style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <!-- <link href="dist/style.css" rel="stylesheet" /> -->
     <title>Frontend Mentor | Product list with cart</title>
   </head>
   <body
@@ -35,15 +36,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -54,15 +78,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -73,15 +120,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -92,15 +162,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -111,15 +204,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -130,15 +246,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -149,15 +288,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -168,15 +330,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -187,15 +372,38 @@
             <div>
               <div class="flex items-center justify-center translate-y-[-50%]">
                 <div
-                  class="flex items-center gap-x-2 bg-white w-fit px-5 py-3 border border-Rose500 rounded-full cursor-pointer"
+                  class="flex items-center gap-x-2 w-fit px-5 py-3 rounded-full cursor-pointer"
                   data-atc=""
                 >
-                  <img src="assets/images/icon-add-to-cart.svg" alt="" />
-                  <button class="font-[600]">Add to Cart</button>
+                  <div
+                    class="flex gap-x-3 w-full border border-Rose500 bg-white px-5 py-3 rounded-full"
+                    data-addtocartbtn=""
+                  >
+                    <img src="assets/images/icon-add-to-cart.svg" alt="" />
+                    <button class="font-[600]">Add to Cart</button>
+                  </div>
+                  <div
+                    class="flex w-full items-center px-5 py-3 rounded-full gap-x-5 bg-Red hidden"
+                    data-incquantitydec=""
+                  >
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-decrement-quantity.svg"
+                      alt=""
+                      data-dec=""
+                    />
+                    <p class="text-white font-[600]">1</p>
+                    <img
+                      class="w-[20px] h-[20px] p-1 rounded-full border border-white"
+                      src="assets/images/icon-increment-quantity.svg"
+                      alt=""
+                      data-inc=""
+                    />
+                  </div>
                 </div>
               </div>
               <div class="mt-[-8px]">
-                <p class="text-Rose500"></p>
+                <p class="text-Rose500" data-rose=""></p>
                 <h2 class="font-[600] text-lg text-Rose900"></h2>
                 <p class="text-Red font-[600] text-lg" data-price=""></p>
               </div>
@@ -275,9 +483,7 @@
             ></div>
             <div class="flex items-center justify-between w-full pt-5">
               <p class="text-Rose900">Order Total</p>
-              <h2 class="text-Rose900 font-[700] text-3xl" id="orderTotal">
-                $46.00
-              </h2>
+              <h2 class="text-Rose900 font-[700] text-3xl" id="orderTotal"></h2>
             </div>
           </div>
           <div
