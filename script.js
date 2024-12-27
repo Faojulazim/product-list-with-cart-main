@@ -89,6 +89,31 @@ function dataFunc(dataImg) {
         totalPrice: parseFloat(buttonPrice.innerText.slice(1)),
       };
       cartItems.push(newCartItem);
+
+      document.getElementById("addItem").insertAdjacentHTML(
+        "beforeend",
+        `<div id="cart">
+            <div class="pt-5 pb-4 flex items-center justify-between border-b-2 border-[rgba(0_0_0/.05)]" id="getElem">
+              <div id="imgDiv" class="flex items-center gap-x-5">
+                <div class="hidden" id="imgContainer">
+                  <img class="w-[55px] rounded-[5px]" src="${buttonImg}" alt="" />
+                </div>
+                <div>
+                  <p class="font-[600] text-Rose900 text-[17px]">${buttonTitle.innerText}</p>
+                  <div class="flex items-center gap-x-5 mt-[6px]">
+                    <p class="text-Red font-[600] quantity">1x</p>
+                    <div class="flex items-center gap-x-3">
+                      <p class="text-Rose400">@${buttonPrice.innerText}</p>
+                      <p class="text-Rose500 font-[600] totalPrice">${buttonPrice.innerText}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="cursor-pointer border border-Rose400 w-[23px] p-[3px] rounded-full" data-remove="" src="assets/images/icon-remove-item.svg" alt="" />
+            </div>
+          </div>
+        `
+      );
       let existingItemIndex = cartItems.findIndex((item) => {
         return item.title === buttonTitle.innerText;
       });
@@ -114,30 +139,6 @@ function dataFunc(dataImg) {
       document.querySelector("#totalPri").innerText = `$${totalPrice.toFixed(
         2
       )}`;
-      document.getElementById("addItem").insertAdjacentHTML(
-        "beforeend",
-        `<div id="cart">
-            <div class="pt-5 pb-4 flex items-center justify-between border-b-2 border-[rgba(0_0_0/.05)]" id="getElem">
-              <div id="imgDiv" class="flex items-center gap-x-5">
-                <div class="hidden" id="imgContainer">
-                  <img class="w-[55px] rounded-[5px]" src="${buttonImg}" alt="" />
-                </div>
-                <div>
-                  <p class="font-[600] text-Rose900 text-[17px]">${buttonTitle.innerText}</p>
-                  <div class="flex items-center gap-x-5 mt-[6px]">
-                    <p class="text-Red font-[600] quantity">1x</p>
-                    <div class="flex items-center gap-x-3">
-                      <p class="text-Rose400">@${buttonPrice.innerText}</p>
-                      <p class="text-Rose500 font-[600] totalPrice">${buttonPrice.innerText}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <img class="cursor-pointer border border-Rose400 w-[23px] p-[3px] rounded-full" data-remove="" src="assets/images/icon-remove-item.svg" alt="" />
-            </div>
-          </div>
-        `
-      );
       getImg(buttonImg, buttonCategory, buttonTitle, buttonPrice, element);
     });
   });
@@ -177,7 +178,6 @@ function getImg(buttonImg, buttonCategory, buttonTitle, buttonPrice, element) {
       cartItems = cartItems.filter((item) => {
         return item.title !== itemTitle;
       });
-      console.log(cartItems, itemTitle);
       totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
       document.getElementById("cartItems").innerText = totalQuantity;
       checkIfCartIsEmpty();
@@ -241,7 +241,7 @@ document.querySelectorAll("[data-inc]").forEach((elem, index) => {
           ".quantity"
         ).innerText = `${cartItems[existingItemIndex].quantity}x`;
         eleme.querySelector(".totalPrice").innerText = `$${(
-          Number(eleme.querySelector(".quantity").innerText.slice(0, 1)) *
+          Number(eleme.querySelector(".quantity").innerText.replace("x", "")) *
           cartPrice
         ).toFixed(2)}`;
       }
@@ -318,7 +318,6 @@ document.getElementById("newOrder").addEventListener("click", (e) => {
       "border-Red"
     );
   });
-
   cartItems = [];
 });
 
