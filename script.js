@@ -89,7 +89,6 @@ function dataFunc(dataImg) {
         totalPrice: parseFloat(buttonPrice.innerText.slice(1)),
       };
       cartItems.push(newCartItem);
-
       document.getElementById("addItem").insertAdjacentHTML(
         "beforeend",
         `<div id="cart">
@@ -229,7 +228,6 @@ document.querySelectorAll("[data-inc]").forEach((elem, index) => {
     val++;
     cartItems[existingItemIndex].quantity += 1;
     elem.previousElementSibling.innerText = val;
-
     document.querySelectorAll("#cart").forEach((eleme, index) => {
       if (
         elem.parentElement.parentElement.parentElement.parentElement.querySelector(
